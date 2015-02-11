@@ -8,10 +8,10 @@ public class ChickenAi : AiScript
 {
 	public ChickenAi()
 	{
-		SetAggroRadius(400);
+		SetAggroRadius(100000);
 		
-		Hates("/fox/");
-		Loves("/hen/");
+		Hates("/pc/");
+	
 	}
 	
 	protected override IEnumerable Idle()

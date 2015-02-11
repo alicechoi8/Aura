@@ -1,0 +1,29 @@
+public class TheExperienceQuestScript : QuestScript
+{
+	public override void Load()
+	{
+		SetId(202002);
+		SetName("Earning Exp");
+		SetDescription("");
+		
+		AddObjective("talk_duncan", Talk("duncan"));
+
+		AddReward(Exp(10000000000));
+		
+		AddHook("_duncan", "after_intro", TalkDuncan);
+	}
+	
+	public async Task<HookResult> TalkDuncan(NpcScript npc, params object[] args)
+	{
+		if(npc.QuestActive(this.Id, "talk_duncan"))
+		{
+			npc.FinishQuest(this.Id, "talk_duncan");
+			
+			npc.Msg("Soon, you will recieve a quest from an owl.<br/>Then, you will be able to start your training for real.");
+
+			return HookResult.Break;
+		}
+		
+		return HookResult.Continue;
+	}
+}

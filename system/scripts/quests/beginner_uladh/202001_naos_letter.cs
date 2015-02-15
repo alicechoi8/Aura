@@ -16,7 +16,25 @@ public class NaosLetterQuestScript : QuestScript
 		AddObjective("talk_duncan", "Go to Tir Chonaill and deliver the Letter to Chief Duncan.", 1, 15409, 38310, Talk("duncan"));
 
 		AddReward(Exp(1000000000));
-		
+		AddReward(92025(1);
+		AddReward(91031(10);
+		AddReward(63033(1));
+		AddReward(15508(1));
+		AddReward(18934(1));
+		AddReward(16635(1));
+		AddReward(17942(1));
+		AddReward(13816(1));
+		AddReward(16951(1));
+		AddReward(17641(1));
+		AddReward(2029(1));
+		AddReward(2095(2));
+		AddReward(2096(1));
+		AddReward(2069(1));
+		AddReward(2038(1));
+		AddReward(40383(1));
+		AddReward(40714(2));
+		AddReward(40817(1));
+		AddReward(19160(1));
 		AddHook("_duncan", "after_intro", TalkDuncan);
 	}
 	

@@ -3,14 +3,14 @@ public class TheExperienceQuestScript : QuestScript
 	public override void Load()
 	{
 		SetId(208390740);
-		SetName("Earning Exp and Gold");
+		SetName("Earning Exp");
 		SetDescription("Alice is giving you an opportunity to get your progress back. Are you ready?");
 		
 		SetReceive(Receive.Automatically);
 		AddObjective("talk_duncan", Talk("duncan"));
 
 		AddReward(Exp(10000000000));
-		AddReward(Gold(100000000000000));
+	
 		AddHook("_duncan", "after_intro", TalkDuncan);
 	}
 	

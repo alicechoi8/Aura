@@ -9,7 +9,9 @@ public class TheExperienceQuestScript : QuestScript
 		SetReceive(Receive.Automatically);
 		AddObjective("talk_duncan", Talk("duncan"));
 
-		AddReward(Exp(10000000000));
+		AddReward(Exp(10000000));
+		AddReward(Gold(9000000));
+		AddReward(AP(9000));
 	
 		AddHook("_duncan", "after_intro", TalkDuncan);
 	}
